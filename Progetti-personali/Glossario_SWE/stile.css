@@ -1,0 +1,27 @@
+.definizione, .altro, #lista > div > ul{
+    margin: 1em 4em;
+    display: block;
+    left:30%;
+}
+
+#nome,#definizione,#altro{
+    display: block;
+    margin:1em;
+}
+
+#submit{
+    display: block;
+    margin: 1em;
+    margin-bottom: 2em;
+    padding: 0.5em;
+}
+
+.bottoneModifica{
+    display: block;
+    float:right;
+}
+
+#link{
+    display: block;
+    margin-bottom:2em;
+}
