@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/Immagini">
+        <file>Immagini/bibita.png</file>
+        <file>Immagini/cancella.png</file>
+        <file>Immagini/menu.png</file>
+        <file>Immagini/nserisci.png</file>
+        <file>Immagini/paga.png</file>
+        <file>Immagini/panino.png</file>
+        <file>Immagini/patatine.png</file>
+        <file>Immagini/logo.png</file>
+    </qresource>
+</RCC>
