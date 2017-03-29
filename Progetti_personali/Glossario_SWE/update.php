@@ -2,7 +2,7 @@
     require("interrogation.php");
 
     echo"<html><head><link rel='stylesheet' href='stile.css' /></head><body>";
-    
+
     echo"<div><a href='index.php'>Lista</a></div>";
 
     $connessione=connessione();
@@ -15,7 +15,7 @@
                 echo"<p>Qualcosa è andato storto nel passaggio della modifica</p>";
             }
             else{
-                if(!$result=$connessione->query("SELECT * FROM glossario WHERE NOME='".$_POST["bottoneModifica"]."';")){
+                if(!$result=$connessione->query("SELECT * FROM glossario WHERE NOME=\"".$_POST["bottoneModifica"]."\";")){
                     echo"errore della query: ".$connessione->error.".";
                 exit();
                 }
@@ -23,8 +23,8 @@
                     if($result->num_rows > 0){
                         while($row = $result -> fetch_array(MYSQLI_ASSOC)){
                             echo"<form action='update.php' method='post'>
-                            <input type='hidden' value='".$_POST["bottoneModifica"]."' name='nomePrecedente'/>
-                            <label id='nome'>Nome:<input type='text' value='".$row['NOME']."' id='nome' name='nome'/></label>
+                            <input type='hidden' value=\"".$_POST["bottoneModifica"]."\" name='nomePrecedente'/>
+                            <label id='nome'>Nome:<input type='text' value=\"".$row['NOME']."\" id='nome' name='nome'/></label>
                             <label id='definizione'>Definzione:<textarea id='definizione' cols='40' rows='15' name='definizione'>".$row['DEFINIZIONE']."</textarea></label>
                             <label id='altro'>Altro:<textarea id='altro' cols='40' rows='15' name='altro'>".$row['ALTRO']."</textarea></label>
                             <input type='submit'value='Modifica/Elimina' id='submit' />
@@ -63,7 +63,7 @@
                 }
             }
         }
-        
+
     }
     else{
         echo"<p>Dove vai se il _POST non ce l'hai?</p>";
