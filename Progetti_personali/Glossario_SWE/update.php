@@ -53,7 +53,7 @@
                     echo"<p>Form non compilata correttamente</p>";
                 }
                 else{
-                    if(!$result=$connessione->query("UPDATE glossario SET `NOME`=\"".$_POST["nome"]."\",`DEFINIZIONE`=\"".$_POST["definizione"]."\",`ALTRO`=\"".$_POST["altro"]."\" WHERE `NOME`='".$_POST["nomePrecedente"]."'")){
+                    if(!$result=$connessione->query("UPDATE glossario SET `NOME`=\"".$_POST["nome"]."\",`DEFINIZIONE`=\"".$_POST["definizione"]."\",`ALTRO`=\"".$_POST["altro"]."\" WHERE `NOME`=\"".$_POST["nomePrecedente"]."\"")){
                         echo"errore della query: ".$connessione->error.".";
                         exit();
                     }
